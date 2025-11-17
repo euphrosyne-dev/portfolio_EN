@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const typewriterElement = document.getElementById('typewriter');
     
-    // MODIFIÉ : Le texte est maintenant aligné sur le poste "Growth Ops"
     const textToType = "Epitech Pré-MSc Student | Focusing on Web Development & Data";
     
     let index = 0;
@@ -46,7 +45,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
-            // MODIFIÉ : J'ai changé 'accueil' en 'home' pour matcher le lien de la nav
             if (section.getAttribute('id') === 'home' && pageYOffset < sectionTop + 150) {
                  current = 'home';
             } else if (pageYOffset >= sectionTop - 150) {
@@ -54,7 +52,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
 
-        // Petite correction pour s'assurer que 'home' est détecté
          if (window.scrollY < 200) {
              current = 'home';
          }
